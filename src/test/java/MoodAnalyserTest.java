@@ -23,7 +23,7 @@ public class MoodAnalyserTest {
     }
     @Parameterized.Parameters
     public static Collection parameters(){
-        return Arrays.asList(new Object[][]{{"I am sad", "SAD"}, {"I am Happy", "HAPPY"}, {"I am sad", "SAD"}, {"He is Happy", "HAPPY"}, {"sad is about sad", "SAD"}, {"I was Happy", "HAPPY"}});
+        return Arrays.asList(new Object[][]{{"I am sad", "SAD"}, {"I am Happy", "HAPPY"}, {"I am sad", "SAD"}, {"He is Happy", "HAPPY"}, {"sad is about sad", "SAD"}, {"I was Happy", "HAPPY"},{null,"HAPPY"}});
     }
    /*
     * this is test case for analyse mood Method.

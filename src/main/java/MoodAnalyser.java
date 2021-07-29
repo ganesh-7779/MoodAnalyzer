@@ -8,12 +8,17 @@
 public class MoodAnalyser {
 
     /*
-     * this is a method for uc1 it will analyse message contain and respond
+     * this is a method for uc2 it will analyse message contain and respond
+     * if message contain null then it catch null pointer exception and return HAPPY
      */
     public static String analyseMood(String message) {
-        if (message.contains(("sad"))) {
-            return "SAD";
-        } else {
+        try {
+            if (message.contains(("sad"))) {
+                return "SAD";
+            } else {
+                return "HAPPY";
+            }
+        } catch (NullPointerException e){
             return "HAPPY";
         }
     }
