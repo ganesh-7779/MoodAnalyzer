@@ -6,6 +6,7 @@
  * @since 29.07.2021
  ******************************************/
 public class MoodAnalyser {
+
     /*
      * this is a method for uc1 it will analyse message contain and respond
      */
@@ -13,10 +14,9 @@ public class MoodAnalyser {
         if (message.contains(("sad"))) {
             return "SAD";
         } else {
-            return "Happy";
+            return "HAPPY";
         }
     }
     public static void main(String[] args) {
-        System.out.print(analyseMood("Now my mood is sad"));
     }
 }
