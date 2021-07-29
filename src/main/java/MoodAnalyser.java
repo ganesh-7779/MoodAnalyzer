@@ -11,7 +11,7 @@ public class MoodAnalyser {
      * this is a method for uc2 it will analyse message contain and respond
      * if message contain null then it catch null pointer exception and return HAPPY
      */
-    public static String analyseMood(String message) {
+    public static String analyseMood(String message) throws MoodAnalysisException {
         try {
             if (message.contains(("sad"))) {
                 return "SAD";
@@ -19,7 +19,7 @@ public class MoodAnalyser {
                 return "HAPPY";
             }
         } catch (NullPointerException e){
-            return "HAPPY";
+            throw new MoodAnalysisException("Please Enter Proper Message");
         }
     }
     public static void main(String[] args) {

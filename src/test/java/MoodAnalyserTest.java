@@ -31,9 +31,13 @@ public class MoodAnalyserTest {
     * else return HAPPY
     */
     @Test
-    public void givenMessage_ShouldReturnMood() {
-        MoodAnalyser analyser= new MoodAnalyser();
-        String mood = analyser.analyseMood(input);
-        Assert.assertEquals(expected,mood);
+    public void givenMessage_ShouldReturnMood() throws MoodAnalysisException {
+        try {
+            MoodAnalyser analyser = new MoodAnalyser();
+            String mood = analyser.analyseMood(input);
+            Assert.assertEquals(expected, mood);
+        } catch (MoodAnalysisException e){
+            e.printStackTrace();
+        }
     }
 }
